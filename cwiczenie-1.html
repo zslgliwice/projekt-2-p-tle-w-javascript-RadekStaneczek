@@ -20,13 +20,19 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
+		let wynik = document.querySelector("#wynik");
+
 		function wylosuj()
 		{
+			wynik.innerHTML = "";
+			let number = document.querySelector("#ile").value;
+			for(let i = 0; i < number; i++)
+			{
+				var liczba = Math.floor(Math.random() * 1000) + 1;
+				wynik.innerHTML += liczba + " ";
+			}
+			return wynik.innerHTML;
 			
-			
-			
-			var liczba = Math.floor(Math.random() * 1000) + 1;
 			
 		}
 

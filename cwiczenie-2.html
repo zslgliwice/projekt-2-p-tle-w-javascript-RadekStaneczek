@@ -20,10 +20,38 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
+		let wynik = document.querySelector("#wynik");
 		function generuj()
 		{
-			
+			wynik.innerHTML = " ";
+			let x = document.querySelector("#x").value;
+			let parzyste = [];
+			let nieparzyste =[];
+
+			for(let i = 0;i < x; i++)
+			{
+				if(i % 2 == 0)
+				{
+					parzyste.push(i);
+				}
+				else
+				{
+					nieparzyste.push(i);
+				}
+				console.log(i);
+			}
+			wynik.innerHTML += "Parzyste: ";
+			for(let i = 0;i < parzyste.length;i++)
+			{
+				wynik.innerHTML += " " + parzyste[i];
+			}
+			wynik.innerHTML += " Nieparzyste: ";
+			for(let i = 0;i < nieparzyste.length;i++)
+			{
+				wynik.innerHTML += " " + nieparzyste[i];
+			}
+			console.log(parzyste);
+			return wynik.innerHTML;
 		}
 
 	</script>
