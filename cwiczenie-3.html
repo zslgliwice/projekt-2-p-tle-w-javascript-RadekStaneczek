@@ -27,10 +27,31 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
+		let wynik = document.querySelector("#wynik");
+		let postac = document.querySelector("#postac");
+		let ile = document.querySelector("#ile");
 		function przemowa()
 		{
-			
+			wynik.innerHTML = "";
+			let tekst;
+			if(postac.value == "Rejent")
+			{
+				tekst = "Niech się dzieje wola nieba!";
+			}
+			else if(ile.value < 0)
+			{
+				tekst = "Jeśli nie chcesz mojej zguby, krokodyla daj mi, luby";
+				return wynik.innerHTML += "1." + tekst + "<br>";
+			}
+			else
+			{
+				tekst = "Mocium panie!";
+			}
+
+			for(let i = 1;i <= ile.value; i++)
+			{
+				wynik.innerHTML += i + "." + tekst + "<br>";
+			}
 		}
 
 	</script>

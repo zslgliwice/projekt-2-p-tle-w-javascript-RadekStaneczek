@@ -20,10 +20,32 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
+		let wynik = document.querySelector("#wynik");
 		function sledztwo()
 		{
-			
+			let morderca = document.querySelector("#liczba").value;
+			wynik.innerHTML = "";
+			console.log(morderca);
+			if(morderca > 9 || morderca < 0)
+			{
+				return wynik.innerHTML = "No sh*t Sherlock!";
+			}
+			for(let i = 0;i <= morderca;i++)
+			{
+				if(i < morderca)
+				{
+					wynik.innerHTML += i + " jest niewinne,jest o " + (morderca-i) + " mniejsze niż morderca<br>";
+				}
+				else if( i == morderca)
+				{
+					wynik.innerHTML +=  i + " jest mordercą! Aresztuj je Watsonie!<br>";
+				}
+				else
+				{
+					wynik.innerHTML +=  i + " jest niewinne,jest o " + (i - morderca)+ " większe niż morderca<br>";
+				}
+			}	
+			return wynik.innerHTML;
 		}
 
 	</script>
